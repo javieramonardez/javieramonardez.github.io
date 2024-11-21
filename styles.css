@@ -44,14 +44,14 @@ body {
 
 /* Slideshow Styles */
 .slideshow {
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
     text-align: center;
     position: relative;
 }
 
 .slides {
-    width: 75%;              /* Make images responsive to the slideshow container */
+    width: 80%;              /* Make images responsive to the slideshow container */
     height: auto;             /* Maintain the aspect ratio of the images */
     object-fit: contain;      /* Ensures the entire image is visible */
     display: block;           /* Avoid inline styling issues */
