@@ -35,7 +35,7 @@ body {
 /* Image in Intro Section */
 .intro-image {
     display: block;
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
     margin: 20px auto;
     border: 1px solid #ddd;
