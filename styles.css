@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8e8e8;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Sections */
+.intro, .digital-book, .prints, .gallery {
+    margin-bottom: 40px;
+}
+
+.intro p, .digital-book p, .prints p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Image in Intro Section */
+.intro-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Slideshow Styles */
+.slideshow {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8e8e8;
+}
+
+.footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
