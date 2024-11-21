@@ -11,31 +11,39 @@
         <h1>Javiera Monardez</h1>
     </header>
     <main class="main-content">
+        <!-- Introduction Section -->
         <section class="intro">
             <p>
                 Nacida en Santiago, Chile, Javiera Monardez comenzó a pintar con acuarelas y óleo a los 13 años.
                 Su trabajo artístico explora temas profundos como la salud mental, buscando contrastar y comparar la belleza y la fealdad.
                 A través de sus obras, basándose en elementos como la moda y la naturaleza, invita al espectador a reflexionar sobre cómo estas dos facetas opuestas pueden coexistir y complementarse.
             </p>
+            <img src="images/image1.jpg" alt="Example Artwork by Javiera Monardez" class="intro-image">
         </section>
         
+        <!-- Galería de Arte Section -->
         <section class="gallery">
             <h2>Galería de Arte</h2>
-            <div class="slideshow">
-                <img src="images/artwork1.jpg" alt="Artwork 1">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
-                <img src="images/artwork3.jpg" alt="Artwork 3">
-            </div>
+            <p>
+                Próximamente, más detalles sobre mi trabajo artístico.
+            </p>
         </section>
         
+        <!-- Libro Digital Section -->
         <section class="digital-book">
             <h2>Libro Digital</h2>
             <p>
                 Este compilado digital documenta la exhibición de arte “Síntomas” realizada en septiembre de 2023
                 en la Galería de Arte Casa Chagual, ubicada en Quillota.
             </p>
+            <div class="slideshow">
+                <img src="images/artwork1.jpg" alt="Artwork 1" class="slides" style="display: block;">
+                <img src="images/artwork2.jpg" alt="Artwork 2" class="slides" style="display: none;">
+                <img src="images/artwork3.jpg" alt="Artwork 3" class="slides" style="display: none;">
+            </div>
         </section>
         
+        <!-- Prints Section -->
         <section class="prints">
             <h2>Prints</h2>
             <p>
@@ -48,5 +56,20 @@
         <p>© Javiera Monardez</p>
         <p>Follow: <a href="https://www.instagram.com/javieramonardez_cl/" target="_blank">Instagram</a></p>
     </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? 'block' : 'none';
+            });
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+
+        setInterval(showSlides, 2500); // Change image every 2.5 seconds
+    </script>
 </body>
 </html>
