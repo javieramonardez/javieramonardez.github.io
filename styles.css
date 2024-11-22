@@ -158,3 +158,67 @@ body {
     color: #007BFF;
     text-decoration: none;
 }
+
+/* ---- Mobile Responsiveness ---- */
+@media (max-width: 768px) {
+    .container {
+        display: block; /* Stack the panels vertically */
+    }
+
+    .left-panel {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height for mobile */
+        position: relative; /* Make it scrollable with the rest of the content */
+    }
+
+    .static-image {
+        width: 100%; /* Ensure the image scales with the screen */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .right-panel {
+        width: 100%; /* Full width for content */
+        margin-left: 0; /* Remove offset for mobile */
+        overflow-y: visible; /* Allow content to scroll normally */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    /* Header */
+    .header h1 {
+        font-size: 1.8rem; /* Smaller font size for header */
+    }
+
+    /* Intro Image */
+    .intro-image {
+        max-width: 100%; /* Allow the image to fill the screen width */
+        margin: 10px auto; /* Reduce margins */
+    }
+
+    /* Slideshow */
+    .slideshow {
+        max-width: 100%; /* Ensure the slideshow fits the screen */
+        margin: 10px auto; /* Center on smaller screens */
+    }
+
+    .slides {
+        width: 100%; /* Full width of the slideshow container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Prints Section */
+    .print-images {
+        flex-direction: column; /* Stack the images vertically */
+        align-items: center; /* Center the images */
+        gap: 15px; /* Adjust spacing between images */
+    }
+
+    .print-image {
+        width: 80%; /* Reduce image size on smaller screens */
+        max-width: 250px; /* Limit maximum width */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 10px; /* Reduce footer padding for mobile */
+    }
+}
