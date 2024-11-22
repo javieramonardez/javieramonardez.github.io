@@ -30,7 +30,7 @@ body::before {
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #e8e8e8;
+    background-color: #f9f9f9; /* Light gray background */
 }
 
 .header h1 {
