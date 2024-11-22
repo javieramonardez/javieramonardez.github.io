@@ -78,6 +78,21 @@ body::before {
     margin: 0 auto;           /* Centers the image in the container */
 }
 
+.print-images {
+    display: flex;             /* Arrange images side by side */
+    justify-content: center;   /* Center the images */
+    gap: 20px;                 /* Add spacing between images */
+    margin-top: 20px;          /* Add spacing above the images */
+}
+
+.print-image {
+    width: 45%;                /* Make each image take 45% of the container width */
+    max-width: 300px;          /* Limit the maximum width of each image */
+    height: auto;              /* Maintain aspect ratio */
+    border: 1px solid #ddd;    /* Optional: Add a border */
+    border-radius: 5px;        /* Optional: Round the corners */
+}
+
 /* Footer */
 .footer {
     text-align: center;
