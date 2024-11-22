@@ -6,6 +6,13 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
+
+    background-image: url("images/background.jpg"); /* Use the correct path to your image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed while scrolling */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    color: #fff; /* Optional: Adjust text color to make it readable */
 }
 
 /* Header */
