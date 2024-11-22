@@ -52,6 +52,10 @@
                 <img src="images/artwork21.jpg" alt="Artwork 21" class="slides" style="display: none;">
                 <img src="images/artwork22.jpg" alt="Artwork 22" class="slides" style="display: none;">
                 <img src="images/artwork23.jpg" alt="Artwork 23" class="slides" style="display: none;">
+
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a> <!-- Left arrow -->
+                <a class="next" onclick="changeSlide(1)">&#10095;</a> <!-- Right arrow -->
             </div>
         </section>
         
@@ -87,5 +91,33 @@
 
         setInterval(showSlides, 2500); // Change image every 2.5 seconds
     </script>
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slides');
+
+    function showSlide(index) {
+        // Wrap around when index goes out of bounds
+        if (index >= slides.length) {
+            currentSlide = 0; // Go back to the first slide
+        } else if (index < 0) {
+            currentSlide = slides.length - 1; // Go to the last slide
+        } else {
+            currentSlide = index;
+        }
+
+        // Hide all slides and show only the current one
+        slides.forEach((slide, i) => {
+            slide.style.display = i === currentSlide ? 'block' : 'none';
+        });
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Initialize the slideshow
+    showSlide(currentSlide);
+</script>
 </body>
 </html>
