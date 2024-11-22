@@ -81,6 +81,7 @@
     <script>
     let currentSlide = 0; // Track the current slide
     const slides = document.querySelectorAll('.slides'); // Select all slides
+    let slideInterval; // Declare the interval variable for auto-transition
 
     // Function to display the current slide
     function showSlide(index) {
@@ -99,13 +100,28 @@
         });
     }
 
-    // Function to change slides
+    // Function to change slides manually
     function changeSlide(direction) {
         showSlide(currentSlide + direction);
+        resetAutoTransition(); // Restart the auto-transition timer when buttons are used
+    }
+
+    // Auto-transition the slides every 5 seconds
+    function startAutoTransition() {
+        slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1); // Move to the next slide
+        }, 5000); // 5 seconds
+    }
+
+    // Reset auto-transition when a manual change is triggered
+    function resetAutoTransition() {
+        clearInterval(slideInterval); // Clear the existing interval
+        startAutoTransition(); // Restart the interval
     }
 
     // Initialize the slideshow
     showSlide(currentSlide);
+    startAutoTransition();
 </script>
 
 </body>
