@@ -15,6 +15,17 @@ body {
     color: #fff; /* Optional: Adjust text color to make it readable */
 }
 
+body::before {
+    content: ""; /* Creates a pseudo-element */
+    position: fixed; /* Ensures it stays fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Sends the overlay behind the body content */
+}
+
 /* Header */
 .header {
     text-align: center;
