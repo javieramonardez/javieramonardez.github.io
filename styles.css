@@ -6,24 +6,39 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-
-    background-image: url("images/background.jpg"); /* Use the correct path to your image */
-    background-size: cover; /* Ensure the image covers the entire viewport */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Keep the image fixed while scrolling */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    color: #fff; /* Optional: Adjust text color to make it readable */
 }
 
-body::before {
-    content: ""; /* Creates a pseudo-element */
-    position: fixed; /* Ensures it stays fixed while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: -1; /* Sends the overlay behind the body content */
+/* Container for Two-column Layout */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Left Panel for Static Image */
+.left-panel {
+    width: 50%; /* Half of the viewport width */
+    background-color: #f4f4f4; /* Fallback color */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    position: fixed; /* Stays fixed while scrolling */
+    height: 100%; /* Full viewport height */
+}
+
+.static-image {
+    width: 100%; /* Full width of the left panel */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the panel */
+}
+
+/* Right Panel for Scrollable Content */
+.right-panel {
+    width: 50%; /* Half of the viewport width */
+    margin-left: 50%; /* Offset it to the right of the fixed left panel */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #fff; /* White background for content */
+    padding: 20px; /* Add spacing around content */
 }
 
 /* Header */
@@ -34,11 +49,10 @@ body::before {
 }
 
 .header h1 {
-    color: #000; /* Sets the font color to black */
-    font-size: 2.5rem; /* Optional: Adjust the font size */
-    font-weight: bold; /* Optional: Make the text bold */
-    text-align: center; /* Optional: Center-align the text */
-    margin: 0; /* Optional: Remove any default margins */
+    color: #000; /* Black text */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* Main Content */
@@ -77,7 +91,7 @@ body::before {
 }
 
 .slides {
-    width: 80%;              /* Make images responsive to the slideshow container */
+    width: 100%;              /* Make images responsive to the slideshow container */
     height: auto;             /* Maintain the aspect ratio of the images */
     object-fit: contain;      /* Ensures the entire image is visible */
     display: block;           /* Avoid inline styling issues */
@@ -117,6 +131,7 @@ body::before {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Prints Section */
 .print-images {
     display: flex;             /* Arrange images side by side */
     justify-content: center;   /* Center the images */
